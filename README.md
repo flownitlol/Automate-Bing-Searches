@@ -33,20 +33,6 @@ To install the Microsoft Rewards Bot extension in Microsoft Edge, follow these s
 
 5. The Microsoft Rewards Bot extension should now appear in the list of installed extensions in Microsoft Edge.
 
-## Configuration
-
-The extension requires configuration to provide your Microsoft account credentials. Follow these steps to configure the extension:
-
-1. Click on the Microsoft Rewards Bot extension icon in the toolbar.
-
-2. In the extension popup, click on the "Options" or "Settings" button.
-
-3. Enter your Microsoft account email and password in the provided fields.
-
-4. Customize other settings as desired, such as quiz completion speed or search frequency.
-
-5. Save your changes.
-
 ## Usage
 
 Once the extension is installed and configured, you can start using it to automate tasks on the Microsoft Rewards platform. Here's how to use the Microsoft Rewards Bot extension:
