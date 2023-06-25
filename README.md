@@ -7,8 +7,8 @@
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 [![issues - Automate-Bing-Searches](https://img.shields.io/github/issues/flownitlol/Automate-Bing-Searches)](https://github.com/flownitlol/Automate-Bing-Searches/issues)
 
+![Overview](./images/Screenshot.png)
 ## Description
-
 The Microsoft Rewards Bot is a browser extension for Microsoft Edge that automates tasks on the Microsoft Rewards platform. This extension allows you to effortlessly earn rewards points by automating activities such as completing quizzes, searching the web, and more.
 
 ## Features
