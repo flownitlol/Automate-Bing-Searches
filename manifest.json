@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Automate Bing Searches - By Flownit",
+    "description": "Automatically complete your Bing searches to earn Microsoft Rewards points. By Flownit.",
+    "version": "1.2.0.8",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.bing.com/*"],
+            "js": ["quiz_taker.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "storage",
+        "declarativeNetRequest",
+        "alarms"
+    ],
+    "host_permissions": [
+        "https://*.bing.com/*"
+    ],  
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/icon16.png",
+            "32": "/images/icon32.png",
+            "48": "/images/icon48.png",
+            "128": "/images/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/icon16.png",
+        "32": "/images/icon32.png",
+        "48": "/images/icon48.png",
+        "128": "/images/icon128.png"
+    }
+}
+

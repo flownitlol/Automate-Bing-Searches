@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <div id="popup-container" class="container">
+        <div id="firstTimeWarning" hidden>
+            <h2>Warning!</h2>
+            <p>Using automation tools goes against your user agreement with Microsoft Rewards. Around a dozen users have reported experiencing account suspensions.</p>
+            <p>It is unclear if the account suspensions were a direct cause of using this extension or other activities
+                unrelated to this extension. The account suspensions first started being reported around the time of the
+                introduction of the automated activities.</p>
+            <p>Use this extension, and especially the automated activities, at your own risk!</p>
+            <button class="btn btn-sm btn-primary" id="warningButton">I accept the risks</button>
+
+        </div>
+        <h6><strong>Automate Bing Searches - By Flownit</strong></h6>
+        <!-- <p id="problems">*important* Problems With Bing <img class="icon" src="new-window.png" -->
+        <!-- alt="popup window icon"></p> -->
+        <p id="subscribe" class="hidden"></p>
+        <p id="free-trial-reload" class="hidden">If you have just started your free trial, you must confirm your trial
+            by clicking the link in an email that was just sent to you from ExtensionPay.<br><br>Then, close this popout
+            and reopen it to gain access</p>
+        <p id="premium-access-reload" class="hidden">If you have just purchased access to premium features
+            (<strong>thank you!</strong>), close this popout and reopen it to gain access</p>
+
+        <div class="form-floating">
+            <input type="number" class="form-control" id="count" name="count" min="0" value="30">
+            <label for="count"># of Searches</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <div class="ribbon legacy hidden">
+                <span>Premium</span>
+            </div>
+            <input type="number" class="form-control premium-feature" id="mobile" name="mobile" min="0" value="30">
+            <label for="count"># of Mobile Searches</label>
+        </div>
+        <br>
+        <p id="delay-info">Delay (in seconds) <i id="delay-dropdown" class="fas fa-caret-down flip-up"></i></p>
+        <p id="hiddenDelay" class="hidden">Set the minimum and maximum time between each search. A random number
+            will be selected within that range.<br><br>The randomness will make your searches appear more organic.
+        </p>
+        <div class="form-floating form-div">
+            <input type="number" class="form-control" id="minDelay" step="0.1" name="minDelay" min="0" value="2"
+                max="290">
+            <label for="count">Minimum</label>
+        </div>
+        <div class="form-floating form-div">
+            <input type="number" class="form-control" id="maxDelay" step="0.1" name="maxDelay" min="0" value="3"
+                max="290">
+            <label for="count">Maximum</label>
+        </div>
+        <br>
+        <div class="form-check form-switch" hidden>
+            <input class="form-check-input" type="checkbox" role="switch" id="amazon-selector">
+            <label id="amazon-info" class="form-check-label" for="flexSwitchCheckDefault">Include Amazon Affiliate
+                Link <i id="amazon-dropdown" class="fas fa-caret-down flip-up"></i></label>
+        </div>
+        <p id="hiddenAmazon" class="hidden">As an Amazon Associate, I may earn from qualifying purchases made
+            shortly after using this
+            extension.<br><br>There is no cost to you and I would greatly appreciate the support.</p>
+
+        <p id="maxDelayWarning" class="hidden input-warning">Maximum delay cannot be below your minimum delay</p>
+        <p id="belowZeroDelayWarning" class="hidden input-warning">Minimum delay cannot be below 0</p>
+        <p id="aboveMaxDelayWarning" class="hidden input-warning">Delay cannot exceed 290 seconds</p>
+        <p id="belowRecommendedDelayWarning" class="hidden input-recommended">Bing may not properly track searches
+            made less than 1 second apart</p>
+        <!-- <br> -->
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="start-activities-after-selector">
+            <label id="close-tab-info" class="form-check-label" for="flexSwitchCheckDefault">Start activities after searches</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="close-tab-selector">
+            <label id="close-tab-info" class="form-check-label" for="flexSwitchCheckDefault">Close tab once
+                completed</label>
+        </div>
+
+        <p id="schedulePopup"><a href="">Schedule Searches <img class="icon" src="new-window.png"
+                    alt="popup window icon"></a></p>
+        <!-- <br> -->
+        <p id="pausedQuizzes" class="hidden">Note: your daily activities will pause until your mobile searches have
+            finished</p>
+        <div class="form-floating">
+            <div class="ribbon ribbon-small hidden">
+                <span style="
+                    width: 55px;
+                    top: 9px;
+                    right: -15px;
+                ">Premium</span>
+            </div>
+            <button class="btn btn-sm btn-primary premium-feature" id="quizzes">Start Activities</button>
+            <button class="btn btn-sm btn-primary premium-feature hidden" id="stopQuizzes">Stop Activities</button>
+        </div>
+        <br>
+        <!-- <div class="row"> -->
+        <!-- <div class="col-12 col-left"> -->
+        <button class="btn btn-sm btn-primary" id="search">Start Search</button>
+        <!-- </div> -->
+        <!-- <div class="col-12 col-right"> -->
+        <button class="btn btn-sm btn-primary hidden" id="stop">Stop Search</button>
+        <!-- </div> -->
+        <!-- </div> -->
+        <br>
+        <br>
+        <p class="hidden" id="searches-left">Searches left: </p>
+        <p class="hidden" id="review"><a target="_blank"
+                href="https://chrome.google.com/webstore/detail/automate-your-bing-search/lnikijajdcgnahajfbjffalgnikejicd?hl=en&authuser=0">Leave
+                a review?</a></p>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    <script src="ExtPay.js"></script>
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
