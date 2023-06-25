@@ -1,6 +1,11 @@
 # Automate Bing Searches - Edge Extension
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![flownitlol - Automate-Bing-Searches](https://img.shields.io/static/v1?label=flownitlol&message=Automate-Bing-Searches&color=blue&logo=github)](https://github.com/flownitlol/Automate-Bing-Searches "Go to GitHub repo")
+[![stars - Automate-Bing-Searches](https://img.shields.io/github/stars/flownitlol/Automate-Bing-Searches?style=social)](https://github.com/flownitlol/Automate-Bing-Searches)
+[![forks - Automate-Bing-Searches](https://img.shields.io/github/forks/flownitlol/Automate-Bing-Searches?style=social)](https://github.com/flownitlol/Automate-Bing-Searches)
+[![GitHub tag](https://img.shields.io/github/tag/flownitlol/Automate-Bing-Searches?include_prereleases=&sort=semver&color=blue)](https://github.com/flownitlol/Automate-Bing-Searches/releases/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+[![issues - Automate-Bing-Searches](https://img.shields.io/github/issues/flownitlol/Automate-Bing-Searches)](https://github.com/flownitlol/Automate-Bing-Searches/issues)
 
 ## Description
 
