@@ -21,6 +21,10 @@ The Microsoft Rewards Bot is a browser extension for Microsoft Edge that automat
 
 ## Installation
 
+🎥 Tutorial
+
+Check out this [Tutorial](https://youtu.be/kfxh5hp7kTU) to see how to setup the extention.
+
 To install the Microsoft Rewards Bot extension in Microsoft Edge, follow these steps:
 
 1. Clone or download this repository to your local machine.
